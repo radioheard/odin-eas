@@ -12,3 +12,8 @@
     width: stretch;
 }
 
+#clear {
+    color: purple;
+    font-weight: bolder;
+    background-color: rgb(226, 146, 25);
+}

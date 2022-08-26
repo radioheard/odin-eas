@@ -10,6 +10,7 @@ function divMaker(bigness) {
 
 
 divMaker(bigness);
+
 let container = document.getElementById('container')
 let button = document.getElementById('button').addEventListener('click', function howBig (){
     bigness = prompt('How big?', '16, max 100');
@@ -21,5 +22,13 @@ let button = document.getElementById('button').addEventListener('click', functio
     container.style.gridTemplateColumns = `repeat(${bigness}, 1fr)`
     container.style.gridTemplateRows = `repeat(${bigness}, 1fr)`
     divMaker(bigness);
-}
-)
+})
+
+let clear = document.getElementById('clear').addEventListener('click', function clear (){
+    var nodes = document.getElementById('container').childNodes;
+for(var i=0; i<nodes.length; i++) {
+    if (nodes[i].nodeName.toLowerCase() == 'div') {
+         nodes[i].style.background = 'white';
+     }
+}   
+})
